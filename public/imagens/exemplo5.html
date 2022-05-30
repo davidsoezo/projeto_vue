@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo 5 vue</title>
+
+</head>
+<body>
+    <section id= "app">
+        <h1>
+            Lista de Compras
+        </h1>
+            <form action="">
+                <input type="text" v-model="produto">
+             <button v-on:click="adicionarProduto()">inserir produto </button>
+    
+            </form>
+
+            <ul>
+                <li></li>
+            </ul>
+
+    </section>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const app = vue.createApp({
+            data(){
+                return{
+                    lista:[],
+                    produto:''
+            
+                    
+
+                }
+            },
+            methods:{
+                adicionarProduto(){
+                    alert ("produto adicionado!")
+
+                }
+            }
+        })
+        app.mount("#app")
+    </script>
+
+    
+</body>
+</html>
