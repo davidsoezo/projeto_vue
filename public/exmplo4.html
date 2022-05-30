@@ -12,13 +12,31 @@
             <img :src="itens" alt="" style="width:200px;">
         </div>
         <hr>
-        <p v-for="elementos in frutas">
-            {{ elementos }}
+        <p v-for="(elementos, indice) in frutas">
+            {{ indice }} - {{ elementos }}
         </p>
         <hr>
 
         <p v-for="elementos in eletro">
             {{ elementos }}
+        </p>
+        <hr>
+
+        <p v-for= "(valor, chave) in pessoa">
+        {{ chave }} - {{valor}}
+
+
+        </p>
+        <hr>
+        <p v-for="itens in carros">
+            {{itens.marca}} - {{itens.modelo}} 
+            
+            
+        </p>
+        <hr>
+        <p v-for= "cont in 10">
+            {{cont}}
+
         </p>
 
 
@@ -41,9 +59,22 @@
                         'Ais Friyer',
                         'Liquidificador',
                         'Microondas'
+                    ],
+                    // objeto 
+                    pessoa :{ 
+                        nome : "david santos" ,
+                        idade: 56,
+                        endereco: "rua dos alfeneiros"
+                    },
+                    // vetor de objetos 
+                    carros:[
+                        {marcas:"porshe",modelo:911},
+                        {marca:"Fiat",modelo: "Palio"},
+                        {marca: "volkswagen",modelo:"Gol G6"}
                     ]
+                     
 
-                }
+                } 
             }
         })
 
